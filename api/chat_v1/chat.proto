@@ -9,7 +9,7 @@ option go_package = "github.com/marktsarkov/chat/pkg/chat_v1;chat";
 service Chat {
     rpc Create(CreateRequest) returns (CreateResponse) {}
     rpc Delete(DeleteRequest) returns (google.protobuf.Empty) {}
-    rpc SendMessage(SendRequest) returns (google.protobuf.Empty) {}
+    rpc Send(SendRequest) returns (SendResponse) {}
 }
 
 message CreateRequest {
@@ -29,6 +29,8 @@ message SendRequest {
     string text = 2;
     google.protobuf.Timestamp timestamp = 3;
 }
+
+message SendResponse {}
 
 
 
