@@ -13,7 +13,6 @@ import (
 )
 
 func main() {
-	//message := "Hello, I am a server"
 
 	lis, err := net.Listen("tcp", fmt.Sprintf(":%v", port))
 	if err != nil {
